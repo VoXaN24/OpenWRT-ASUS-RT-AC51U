@@ -21,14 +21,15 @@ This guide will walk you through the process of installing OpenWRT on an ASUS RT
 - Ethernet cable
 - Internet connection
 - Latest OpenWRT firmware for ASUS RT-AC51U
+- A computer or VM with Windows 7 (11 is not supported by the ASUS Software)
 
 ## Downloading OpenWRT Firmware
 1. Visit the [OpenWRT firmware download page](https://openwrt.org/toh/asus/rt-ac51u).
-2. Download the latest stable release for the ASUS RT-AC51U. Look for a file named something like `openwrt-<version>-ramips-mt7620-rt-ac51u-squashfs-sysupgrade.bin`.
+2. Download the latest stable release for the ASUS RT-AC51U. Look for a file named something like `openwrt-<version>-ramips-mt7620-rt-ac51u-squashfs-sysupgrade.bin` or use the file in the repo (last version 08/25).
 
 ## Flashing the Firmware
 ### Step 1: Connect to the Router
-1. Connect your computer to the ASUS RT-AC51U router using an Ethernet cable.
+1. Connect your computer to the ASUS RT-AC51U router using an Ethernet cable. If you use a VM, set the network card to bridge
 2. Set a static IP address on your computer. Use the following settings:
    - IP address: 192.168.1.2
    - Subnet mask: 255.255.255.0
@@ -57,7 +58,7 @@ This guide will walk you through the process of installing OpenWRT on an ASUS RT
 
 ## Reverting to Stock Firmware
 ### Step 1: Download Stock Firmware
-1. Visit the [ASUS support page](https://www.asus.com/us/Networking/RTAC51U/HelpDesk_BIOS/) and download the latest stock firmware for the ASUS RT-AC51U.
+1. You can find the stock firmware file in the repo has ASUS has shutdown the page for it.
 
 ### Step 2: Flash Stock Firmware
 1. Follow the same steps outlined in the **Flashing the Firmware** section, but use the stock firmware file instead of the OpenWRT firmware file.
